@@ -42,25 +42,26 @@ export default function NextGenFord() {
         <>
             <Header />
             <main className="w-full max-w-full">
-                {/* Banner + introduction */}
-                <section className="bg-white">
-                    {/* The banner is 1440x550 with its text baked in, so phones crop the sides */}
+                {/* Banner with the heading on top of the image */}
+                <section className="relative bg-white">
+                    {/* The banner has its own "Coming soon" text at the bottom, so the
+                        heading goes at the top. Phones crop the sides (16:9), from md up
+                        the full picture shows. */}
                     <img
                         src={bannerImage}
-                        alt="The Next-Gen Ford Everest and Next-Gen Ford Ranger parked on a beach"
-                        width={1440}
+                        alt="Coming soon: the Next-Gen Ford Ranger and Ford Everest"
+                        width={2000}
                         height={550}
                         decoding="async"
                         draggable={false}
-                        className="block aspect-[3/2] w-full object-cover object-[55%_50%] sm:aspect-[16/9] md:aspect-auto md:h-auto"
+                        className="block aspect-[16/9] w-full object-cover md:aspect-auto md:h-auto"
                     />
 
-                    <div className="container mx-auto px-4 py-12 sm:py-16 lg:py-20">
-                        <div className="mx-auto max-w-3xl text-center">
-                            <h1 className="text-3xl font-bold leading-tight tracking-tight text-[#003478] sm:text-4xl lg:text-5xl">
-                                Introducing the Next-Gen Ford Vehicles
-                            </h1>
-                        </div>
+                    {/* Dark fade at the top keeps the white heading readable */}
+                    <div className="absolute inset-x-0 top-0 bg-gradient-to-b from-[#001A3D]/85 via-[#001A3D]/50 to-transparent px-4 pb-12 pt-5 text-center sm:pb-16 sm:pt-8 lg:pb-24 lg:pt-12">
+                        <h1 className="mx-auto max-w-4xl text-xl font-bold leading-tight tracking-tight text-white drop-shadow-md sm:text-3xl lg:text-5xl">
+                            Introducing the Next-Gen Ford Vehicles
+                        </h1>
                     </div>
                 </section>
 
