@@ -15,7 +15,7 @@ const NAV_ITEMS = [
     { label: "Finance", to: "/finance" },
     { label: "Virtual Showroom", to: "/virtual-showroom" },
     { label: "Dealer News", to: "/dealer-news" },
-    { label: "Contact Us", to: "/contact" },
+    { label: "Contact Us", to: "/contact-us" },
 ];
 
 export default function Header() {
