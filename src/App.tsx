@@ -6,6 +6,10 @@ import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
 import NextGenFord from "./pages/NextGenFord";
 import Contact from "./pages/Contact";
+import DealerNews from "./pages/DealerNews";
+import ServiceReminder from "./pages/ServiceReminder";
+import ExtendedWarranty from "./pages/ExtendedWarranty";
+import EmergencyRoadside from "./pages/EmergencyRoadSide";
 
 function App() {
     return (
@@ -18,6 +22,19 @@ function App() {
                         element={<NextGenFord />}
                     ></Route>
                     <Route path="contact-us" element={<Contact />}></Route>
+                    <Route path="dealer-news" element={<DealerNews />}></Route>
+                    <Route
+                        path="service-reminders-for-ford-car-owners"
+                        element={<ServiceReminder />}
+                    ></Route>
+                    <Route
+                        path="premium-extended-warranty"
+                        element={<ExtendedWarranty />}
+                    ></Route>
+                    <Route
+                        path="emergency-roadside-assistance"
+                        element={<EmergencyRoadside />}
+                    ></Route>
                     <Route path="*" element={<NotFound />}></Route>
                 </Routes>
             </BrowserRouter>

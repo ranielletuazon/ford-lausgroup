@@ -7,8 +7,11 @@ export type Post = {
     excerpt: string;
     date: string; // YYYY-MM-DD
     image: string;
-    href: string;
+    href: string; // link to the post page, e.g. /dealer-news/rainy-day-blowout
     description?: string;
+    createdAt?: string; // YYYY-MM-DD
+    gallery?: string;
+    status?: string;
 };
 
 // All posts, newest first. Add new posts to post.json and they show up here.
