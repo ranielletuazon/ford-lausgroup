@@ -2,9 +2,12 @@
     {
         "id": 1,
         "title": "Ford Pampanga 25th Anniversary",
-        "excerpt": "Ford Pampanga drives toward…",
+        "excerpt": "Ford Pampanga has made a significant...",
+        "createdAt": "2024-11-08",
         "date": "2024-11-08",
         "image": "/images/news/25thanniv.jpg",
+        "gallery": "",
+        "status": "published",
         "href": "/dealer-news/ford-pampanga-25th-anniversary",
         "description": "Ford Pampanga has made a significant mark as it gained recognition at the recent Ford Dealer Convention held at Okada Manila. The dealership which champions superior customer service and dedication to innovation has been awarded as the Top Selling Provincial Dealer, Top Selling Dealer for Territory, and one of its Sales Consultant Don Hillary Guttierez placed 3rd among the nominees. Behind the said achievement are the incredible people which served as their pillar for success – the valued clients, employees, sales and service personnel, business and bank partners, and all involved stakeholders. These prestigious awards reflects the dealership's continued commitment to quality products and services, and its persistence towards unparalleled satisfaction. Ford Philippines' executives headed the awarding ceremony and expressed their appreciation to the awardees. “We would like to congratulate our outstanding dealer employees and teams for their excellent performance that greatly contributed to the success of Ford Philippines last year. We hope that these accomplishments will further inspire and motivate the rest of our dealer community to continue delivering a great sales and service experience to our customers.” says Mike Breen, Ford Philippines' managing director. The strong commitment to excellence has made this possible and is a proven testimony that a collective effort leads to fruitful rewards."
     },
@@ -34,5 +37,14 @@
         "image": "/images/news/freedomdeals.jpg",
         "href": "/dealer-news/ford-freedom-deals",
         "description": "Ride in complete freedom with your Ford. Own that muscular finish on the outside and sophisticated looks on the inside matching the fierce personality of yours! Leave only trails behind and let the wind be your compass for unstoppable adventures, bringing modern style and luxury together. Feel the rush and seize your smart savings at LausGroup Ford dealers now to get your hands into a brand new Ford! Your next ride is just a call away, get in touch with our sales team now or schedule your showroom visit for a more thorough learning experience for your next car. \nWe have the 𝗿𝗶𝗴𝗵𝘁 𝗰𝗮𝗿 for you."
+    },
+    {
+        "id": 5,
+        "title": "It's #FordOfJuly",
+        "excerpt": "Ride in complete freedom with your Ford. Own…",
+        "date": "2024-07-04",
+        "image": "/images/news/fordofjuly.jpg",
+        "href": "/dealer-news/its-fordofjuly",
+        "description": "Set yourself apart with Ford next-gen models and drive towards victory this July! Be the champ that commands like no other, dominating the streets, and stealing everyone's attention even in a quick glance. Your dynamic lifestyle should be lived with the ultimate convenience that you deserve, giving you the freedom in all life's aspects. Don't be held back by the limits, instead face them head on and see the new definition of how winning in life feels like. \nWe have the right car for you."
     }
 ]
