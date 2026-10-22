@@ -10,6 +10,8 @@ import DealerNews from "./pages/DealerNews";
 import ServiceReminder from "./pages/ServiceReminder";
 import ExtendedWarranty from "./pages/ExtendedWarranty";
 import EmergencyRoadside from "./pages/EmergencyRoadSide";
+import Finance from "./pages/Finance";
+import LausAutoFinance from "./pages/LausAutoFinance";
 
 function App() {
     return (
@@ -34,6 +36,11 @@ function App() {
                     <Route
                         path="emergency-roadside-assistance"
                         element={<EmergencyRoadside />}
+                    ></Route>
+                    <Route path="finance" element={<Finance />}></Route>
+                    <Route
+                        path="laus-auto-finance"
+                        element={<LausAutoFinance />}
                     ></Route>
                     <Route path="*" element={<NotFound />}></Route>
                 </Routes>
