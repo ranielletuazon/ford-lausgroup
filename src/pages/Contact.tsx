@@ -6,7 +6,7 @@ import contactBanner from "../assets/images/contact-banner.jpg";
 
 export default function Contact() {
     // TODO: change this to the real address of the form when it goes online
-    const FORM_URL = "http://localhost/contactus-ford/index.php";
+    const FORM_URL = "http://lausfordgroup.com.ph/php/contactUs.php";
 
     // Google My Maps with the dealership icons
     const MAP_URL =

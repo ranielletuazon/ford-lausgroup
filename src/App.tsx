@@ -12,6 +12,9 @@ import ExtendedWarranty from "./pages/ExtendedWarranty";
 import EmergencyRoadside from "./pages/EmergencyRoadSide";
 import Finance from "./pages/Finance";
 import LausAutoFinance from "./pages/LausAutoFinance";
+import VirtualShowroom from "./pages/VirtualShowroom";
+import NewVehicles from "./pages/NewVehicles";
+import Fleet from "./pages/Fleet";
 
 function App() {
     return (
@@ -42,6 +45,15 @@ function App() {
                         path="laus-auto-finance"
                         element={<LausAutoFinance />}
                     ></Route>
+                    <Route
+                        path="virtual-showroom"
+                        element={<VirtualShowroom />}
+                    ></Route>
+                    <Route
+                        path="new-vehicles"
+                        element={<NewVehicles />}
+                    ></Route>
+                    <Route path="fleet" element={<Fleet />}></Route>
                     <Route path="*" element={<NotFound />}></Route>
                 </Routes>
             </BrowserRouter>
