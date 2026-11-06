@@ -6,14 +6,14 @@ import contactBanner from "../assets/images/contact-banner.jpg";
 
 export default function Contact() {
     // TODO: change this to the real address of the form when it goes online
-    const FORM_URL = "http://lausfordgroup.com.ph/php/contactUs.php";
+    const FORM_URL = "https://crm.lausgroup.com.ph/ContactUsNew/?brand=FRD";
 
     // Google My Maps with the dealership icons
     const MAP_URL =
         "https://www.google.com/maps/d/embed?mid=168D6Fo20kfi9ZCE4O8DFRoyeYXpVh8U&ehbc=2E312F";
 
     const frameRef = useRef<HTMLIFrameElement>(null);
-    const [frameHeight, setFrameHeight] = useState(1000);
+    const [frameHeight, setFrameHeight] = useState(1485);
 
     // The form page tells us how tall it is, so the iframe has no scrollbar
     useEffect(() => {
@@ -56,7 +56,7 @@ export default function Contact() {
                 </section>
 
                 {/* Contact form (the form itself is a separate PHP page) */}
-                <section className="bg-[#F2F2F2] py-10 sm:py-14 lg:py-16">
+                <section className="bg-[#eceff3] py-4 sm:py-8 lg:py-10">
                     <div className="container mx-auto max-w-4xl px-4">
                         <iframe
                             ref={frameRef}
