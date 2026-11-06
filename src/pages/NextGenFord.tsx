@@ -36,7 +36,7 @@ export default function NextGenFord() {
     ];
 
     // TODO: replace with the real inquiry page path
-    const INQUIRY_HREF = "/contact";
+    const INQUIRY_HREF = "/contact-us";
 
     return (
         <>
@@ -120,19 +120,6 @@ export default function NextGenFord() {
                                     className="group mt-6 inline-flex items-center gap-2 rounded-full bg-[#003478] px-8 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-[#066FEF] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#066FEF] focus-visible:ring-offset-2"
                                 >
                                     Send us an Inquiry
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        strokeWidth={2}
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1 motion-reduce:transition-none"
-                                        aria-hidden="true"
-                                    >
-                                        <path d="M5 12h14M13 6l6 6-6 6" />
-                                    </svg>
                                 </a>
                             </div>
                         </div>
@@ -158,19 +145,6 @@ export default function NextGenFord() {
                                 className="group mt-6 inline-flex items-center gap-2 rounded-full border border-[#003478] px-6 py-3 text-sm font-semibold text-[#003478] transition-colors hover:bg-[#003478] hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-[#066FEF] focus-visible:ring-offset-2"
                             >
                                 Send us an Inquiry
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    strokeWidth={2}
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1 motion-reduce:transition-none"
-                                    aria-hidden="true"
-                                >
-                                    <path d="M5 12h14M13 6l6 6-6 6" />
-                                </svg>
                             </a>
                         </div>
                     </div>

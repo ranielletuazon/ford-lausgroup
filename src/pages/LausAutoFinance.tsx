@@ -6,7 +6,7 @@ import bannerImage from "../assets/images/financeheader2.jpg";
 export default function LausAutoFinance() {
     // Same form page that the Contact page uses
     // TODO: change this to the real address of the form when it goes online
-    const FORM_URL = "http://localhost/contactus-ford/index.php";
+    const FORM_URL = "https://crm.lausgroup.com.ph/ContactUsNew/?brand=FRD";
 
     const COVERAGE = [
         {
@@ -155,7 +155,7 @@ export default function LausAutoFinance() {
                 </section>
 
                 {/* Inquiry form (the form itself is a separate PHP page) */}
-                <section className="bg-[#F2F2F2] py-12 lg:py-16">
+                <section className="bg-[#eceff3] py-12 lg:py-16">
                     <div className="container mx-auto px-4">
                         <div className="mx-auto max-w-3xl text-center">
                             <h2 className="text-3xl font-bold uppercase leading-tight text-[#003478] sm:text-4xl">
@@ -168,11 +168,11 @@ export default function LausAutoFinance() {
                             </p>
                         </div>
 
-                        <div className="mx-auto mt-8 max-w-4xl">
+                        <div className="container mx-auto max-w-4xl px-4">
                             <iframe
                                 ref={frameRef}
                                 src={FORM_URL}
-                                title="Inquiry form"
+                                title="Contact form"
                                 style={{ height: frameHeight }}
                                 className="w-full border-0"
                             />

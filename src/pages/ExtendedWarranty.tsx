@@ -9,8 +9,8 @@ import transferableImage from "../assets/images/transferrable-to-next-owner.jpg"
 
 export default function PremiumExtendedWarranty() {
     // TODO: replace with the real page paths
-    const INQUIRY_HREF = "/contact";
-    const APPOINTMENT_HREF = "/book-a-service";
+    const INQUIRY_HREF = "/contact-us";
+    const APPOINTMENT_HREF = "/contact-us";
 
     // YouTube video id: the part after "watch?v=" in the video link.
     // The iframe needs the /embed/ address, a normal watch link is refused.
@@ -359,7 +359,7 @@ export default function PremiumExtendedWarranty() {
                             href={INQUIRY_HREF}
                             className="inline-block rounded-full bg-[#003478] px-6 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-[#066FEF] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#066FEF] focus-visible:ring-offset-2"
                         >
-                            Send us an inquiry
+                            Send us an Inquiry
                         </a>
                         <a
                             href={APPOINTMENT_HREF}

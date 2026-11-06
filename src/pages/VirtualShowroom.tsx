@@ -11,16 +11,56 @@ import step4Image from "../assets/images/agree-purchase-min.jpg";
 export default function VirtualShowroom() {
     // TODO: replace the "#" links with each dealer's Messenger link and email
     const DEALERS = [
-        { name: "Ford Pampanga", messageHref: "#", emailHref: "#" },
-        { name: "Ford Dagupan", messageHref: "#", emailHref: "#" },
-        { name: "Ford Ilocos Norte", messageHref: "#", emailHref: "#" },
-        { name: "Ford Isabela", messageHref: "#", emailHref: "#" },
-        { name: "Ford Libis", messageHref: "#", emailHref: "#" },
-        { name: "Ford Metro Baguio", messageHref: "#", emailHref: "#" },
-        { name: "Ford Clark", messageHref: "#", emailHref: "#" },
-        { name: "Ford Tarlac", messageHref: "#", emailHref: "#" },
-        { name: "Ford Subic", messageHref: "#", emailHref: "#" },
-        { name: "Ford Cabanatuan", messageHref: "#", emailHref: "#" },
+        {
+            name: "Ford Pampanga",
+            messageHref: "https://wa.me/+639188542169",
+            emailHref: "mailto: gadungca@lausgroup.com.ph",
+        },
+        {
+            name: "Ford Dagupan",
+            messageHref: "https://wa.me/+639188542948",
+            emailHref: "mailto: bdvelasco@lausgroup.com.ph",
+        },
+        {
+            name: "Ford Ilocos Norte",
+            messageHref: "https://wa.me/+639188542300",
+            emailHref: "mailto: jvdomingo@lausgroup.com.ph",
+        },
+        {
+            name: "Ford Isabela",
+            messageHref: "https://wa.me/ +639285500803",
+            emailHref: "mailto: cocornel@lausgroup.com.ph",
+        },
+        {
+            name: "Ford Libis",
+            messageHref: "https://wa.me/+639989542814",
+            emailHref: "mailto: mdyambao@lausgroup.com.ph",
+        },
+        {
+            name: "Ford Metro Baguio",
+            messageHref: "https://wa.me/+639188542453",
+            emailHref: "mailto: iddelacruz@lausgroup.com.ph",
+        },
+        {
+            name: "Ford Clark",
+            messageHref: "https://wa.me/+639985900383",
+            emailHref: "mailto: mdpaule@lausgroup.com.ph",
+        },
+        {
+            name: "Ford Tarlac",
+            messageHref: "https://wa.me/+639188542322",
+            emailHref: "mailto: ipvillarosa@lausgroup.com.ph",
+        },
+        {
+            name: "Ford Subic",
+            messageHref: "https://wa.me/+639188542797",
+            emailHref: "mailto: gcverinio@lausgroup.com.ph",
+        },
+        {
+            name: "Ford Cabanatuan",
+            messageHref: "https://wa.me/+639188542222",
+            emailHref: "mailto: jmsantos@lausgroup.com.ph",
+        },
     ];
 
     const STEPS = [
@@ -62,22 +102,18 @@ export default function VirtualShowroom() {
         });
 
     // Share links use the address of this page
-    const pageUrl =
-        typeof window !== "undefined"
-            ? encodeURIComponent(window.location.href)
-            : "";
     const SHARE = [
         {
             label: "Facebook",
-            href: `https://www.facebook.com/sharer/sharer.php?u=${pageUrl}`,
+            href: `https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.lausfordgroup.com.ph%2FPage%2F126%2Fvirtual-showroom-contactless-service&title=Ford%20Laus%20Virtual%20Showroom`,
         },
         {
             label: "Twitter",
-            href: `https://twitter.com/intent/tweet?url=${pageUrl}`,
+            href: `https://twitter.com/intent/tweet?status=Ford%20Laus%20Virtual%20Showroom+https://www.lausfordgroup.com.ph/Page/126/virtual-showroom-contactless-service`,
         },
         {
             label: "LinkedIn",
-            href: `https://www.linkedin.com/sharing/share-offsite/?url=${pageUrl}`,
+            href: `https://www.linkedin.com/uas/login?session_redirect=https%3A%2F%2Fwww.linkedin.com%2FshareArticle%3Fmini%3Dtrue%26url%3Dhttps%3A%2F%2Fwww.lausfordgroup.com.ph%2FPage%2F126%2Fvirtual-showroom-contactless-service6%26title%3DFord%2520Laus%2520Virtual%2520Showroom`,
         },
     ];
 

@@ -77,12 +77,6 @@ export default function DealerNews() {
                                 </p>
                                 <span className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[#003478] transition-colors group-hover:text-[#066FEF]">
                                     Read more
-                                    <span
-                                        aria-hidden="true"
-                                        className="transition-transform group-hover:translate-x-1 motion-reduce:transition-none"
-                                    >
-                                        →
-                                    </span>
                                 </span>
                             </div>
                         </a>
@@ -124,12 +118,6 @@ export default function DealerNews() {
                                                 </p>
                                                 <span className="mt-auto inline-flex items-center gap-2 pt-4 text-sm font-semibold text-[#003478] transition-colors group-hover:text-[#066FEF]">
                                                     Read more
-                                                    <span
-                                                        aria-hidden="true"
-                                                        className="transition-transform group-hover:translate-x-1 motion-reduce:transition-none"
-                                                    >
-                                                        →
-                                                    </span>
                                                 </span>
                                             </div>
                                         </a>

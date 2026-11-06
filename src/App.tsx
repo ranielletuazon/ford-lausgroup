@@ -8,6 +8,7 @@ import NextGenFord from "./pages/NextGenFord";
 import Contact from "./pages/Contact";
 import DealerNews from "./pages/DealerNews";
 import ServiceReminder from "./pages/ServiceReminder";
+import ServiceReminders from "./pages/ServiceReminders";
 import ExtendedWarranty from "./pages/ExtendedWarranty";
 import EmergencyRoadside from "./pages/EmergencyRoadSide";
 import Finance from "./pages/Finance";
@@ -63,6 +64,11 @@ function App() {
                     <Route
                         path="new-vehicles"
                         element={<NewVehicles />}
+                    ></Route>
+                    <Route path="fleet" element={<Fleet />}></Route>
+                    <Route
+                        path="service-reminders"
+                        element={<ServiceReminders />}
                     ></Route>
                     <Route path="fleet" element={<Fleet />}></Route>
 
