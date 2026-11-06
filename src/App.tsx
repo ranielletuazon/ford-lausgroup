@@ -16,6 +16,17 @@ import VirtualShowroom from "./pages/VirtualShowroom";
 import NewVehicles from "./pages/NewVehicles";
 import Fleet from "./pages/Fleet";
 
+// Vehicles
+import Ranger from "./pages/Vehicles/Ranger";
+import RangerRaptor from "./pages/Vehicles/RangerRaptor";
+import Territory from "./pages/Vehicles/Territory";
+import Everest from "./pages/Vehicles/Everest";
+import Explorer from "./pages/Vehicles/Explorer";
+import Bronco from "./pages/Vehicles/Bronco";
+import TerritoryHybrid from "./pages/Vehicles/TerritoryHybrid";
+import MustangMachE from "./pages/Vehicles/MustangMachE";
+import Mustang from "./pages/Vehicles/Mustang";
+
 function App() {
     return (
         <>
@@ -54,6 +65,45 @@ function App() {
                         element={<NewVehicles />}
                     ></Route>
                     <Route path="fleet" element={<Fleet />}></Route>
+
+                    {/* Vehicles */}
+                    <Route
+                        path="/new-vehicles/ranger"
+                        element={<Ranger />}
+                    ></Route>
+                    <Route
+                        path="/new-vehicles/ranger-raptor"
+                        element={<RangerRaptor />}
+                    ></Route>
+                    <Route
+                        path="/new-vehicles/territory"
+                        element={<Territory />}
+                    ></Route>
+                    <Route
+                        path="/new-vehicles/everest"
+                        element={<Everest />}
+                    ></Route>
+                    <Route
+                        path="/new-vehicles/explorer"
+                        element={<Explorer />}
+                    ></Route>
+                    <Route
+                        path="/new-vehicles/bronco"
+                        element={<Bronco />}
+                    ></Route>
+                    <Route
+                        path="/new-vehicles/territory-hybrid"
+                        element={<TerritoryHybrid />}
+                    ></Route>
+                    <Route
+                        path="/new-vehicles/mustang-mach-e"
+                        element={<MustangMachE />}
+                    ></Route>
+                    <Route
+                        path="/new-vehicles/mustang"
+                        element={<Mustang />}
+                    ></Route>
+
                     <Route path="*" element={<NotFound />}></Route>
                 </Routes>
             </BrowserRouter>

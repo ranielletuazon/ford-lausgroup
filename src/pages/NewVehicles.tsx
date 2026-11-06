@@ -51,7 +51,7 @@ export default function NewVehicles() {
                     name: "Ford Mustang",
                     price: 3048000,
                     image: oxfordWhiteImage,
-                    href: "/new-vehicles/ford-mustang",
+                    href: "/new-vehicles/mustang",
                     colors: MUSTANG_COLORS,
                 },
             ],
@@ -283,14 +283,8 @@ export default function NewVehicles() {
                                                                 }
                                                                 className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-2.5 text-sm font-semibold text-[#003478] transition-colors group-hover:bg-[#F2F2F2] focus:outline-none after:absolute after:inset-0 after:z-20 after:rounded-3xl focus-visible:after:ring-4 focus-visible:after:ring-inset focus-visible:after:ring-[#066FEF]"
                                                             >
-                                                                Explore the{" "}
+                                                                Explore{" "}
                                                                 {model.name}
-                                                                <span
-                                                                    aria-hidden="true"
-                                                                    className="transition-transform group-hover:translate-x-1 motion-reduce:transition-none"
-                                                                >
-                                                                    →
-                                                                </span>
                                                             </a>
                                                         </div>
                                                     </div>
@@ -378,13 +372,7 @@ export default function NewVehicles() {
                                                         href={model.href}
                                                         className="inline-flex items-center gap-2 rounded-full bg-[#003478] px-6 py-2.5 text-sm font-semibold text-white transition-colors group-hover:bg-[#066FEF] focus:outline-none after:absolute after:inset-0 after:z-20 after:rounded-3xl focus-visible:after:ring-4 focus-visible:after:ring-inset focus-visible:after:ring-[#066FEF]"
                                                     >
-                                                        Explore the {model.name}
-                                                        <span
-                                                            aria-hidden="true"
-                                                            className="transition-transform group-hover:translate-x-1 motion-reduce:transition-none"
-                                                        >
-                                                            →
-                                                        </span>
+                                                        Explore {model.name}
                                                     </a>
                                                 </div>
                                             </div>
