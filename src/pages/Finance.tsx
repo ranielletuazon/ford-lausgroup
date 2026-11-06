@@ -4,9 +4,9 @@ import bannerImage from "../assets/images/financeheaderbanner.jpg";
 
 export default function Finance() {
     // TODO: replace with the real page paths
-    const SALES_HREF = "/contact";
-    const DEALS_HREF = "/promotions";
-    const INQUIRY_HREF = "/contact";
+    const SALES_HREF = "/contact-us";
+    const DEALS_HREF = "/dealer-news";
+    const INQUIRY_HREF = "/contact-us";
 
     return (
         <>

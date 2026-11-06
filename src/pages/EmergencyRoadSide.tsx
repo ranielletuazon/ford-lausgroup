@@ -8,7 +8,7 @@ import repairsImage from "../assets/images/roadside-repairs.png";
 
 export default function EmergencyRoadside() {
     // TODO: replace with the real inquiry page path
-    const INQUIRY_HREF = "/contact";
+    const INQUIRY_HREF = "/contact-us";
 
     const HOTLINE = "+63-2-8866-9408";
     const HOTLINE_HREF = "tel:+63288669408";

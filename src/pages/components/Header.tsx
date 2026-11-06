@@ -308,12 +308,12 @@ export default function Header() {
                 </nav>
 
                 {/* Desktop CTA */}
-                <a
+                {/* <a
                     href="/test-drive"
                     className="hidden shrink-0 whitespace-nowrap rounded-full bg-[#003478] px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-[#066FEF] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#066FEF] focus-visible:ring-offset-2 xl:inline-block xl:px-6"
                 >
                     Book a Test Drive
-                </a>
+                </a> */}
 
                 {/* Mobile menu button */}
                 <button
