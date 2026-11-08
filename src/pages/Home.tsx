@@ -1,5 +1,6 @@
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import SEO from "./components/SEO";
 import HeroCarousel from "./components/HeroCarousel";
 import CarImageCarousel from "./components/CarImageCarousel";
 import Playlist from "./components/Playlist";
@@ -79,6 +80,10 @@ export default function Home() {
 
     return (
         <>
+            <SEO
+                title="Ford Laus Group - Official Ford Dealer in Luzon"
+                image={homeImage}
+            />
             <Header />
             <main className="w-full max-w-full">
                 {/* Hero Carousel */}

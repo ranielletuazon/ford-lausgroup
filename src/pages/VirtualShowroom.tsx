@@ -1,5 +1,6 @@
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import SEO from "./components/SEO";
 import { getPosts } from "../assets/data/post";
 
 import bannerImage from "../assets/images/virtual-room-banner.jpg";
@@ -119,6 +120,11 @@ export default function VirtualShowroom() {
 
     return (
         <>
+            <SEO
+                title="Virtual Showroom"
+                description="Shop for your new Ford from home with the Ford Laus Group Virtual Showroom. Choose a car, book a virtual appointment, take a video call tour and complete your purchase."
+                image={bannerImage}
+            />
             <Header />
             <main className="w-full max-w-full">
                 {/* Banner */}

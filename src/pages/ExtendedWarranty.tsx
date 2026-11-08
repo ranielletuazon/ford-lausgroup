@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import SEO from "./components/SEO";
 import bannerImage from "../assets/images/warranty.jpg";
 import backedImage from "../assets/images/100-percent.jpg";
 import partsImage from "../assets/images/gear.jpg";
@@ -323,6 +324,11 @@ export default function PremiumExtendedWarranty() {
 
     return (
         <>
+            <SEO
+                title="Ford Premium Extended Warranty"
+                description="Ford Premium Extended Warranty: the most comprehensive service plan protection fully backed by Ford, with genuine parts and transferable coverage."
+                image={bannerImage}
+            />
             <Header />
             <main className="w-full max-w-full">
                 {/* Banner */}

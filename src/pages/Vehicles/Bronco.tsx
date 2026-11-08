@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import SEO from "../components/SEO";
 import ColorPicker from "../components/ColorPicker";
 import { getPosts } from "../../assets/data/post";
 
@@ -197,6 +198,12 @@ export default function Bronco() {
 
     return (
         <>
+            <SEO
+                title="All-New Ford Bronco"
+                description="Discover the All-New Ford Bronco at Ford Laus Group, built for adventure. Explore specs, colors and features."
+                image={heroBanner}
+                type="product"
+            />
             <Header />
             <main className="w-full max-w-full">
                 {/* Hero */}

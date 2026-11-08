@@ -1,5 +1,6 @@
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import SEO from "./components/SEO";
 
 // TODO: add these images to src/assets/images (the people, truck and globe are transparent PNGs)
 import bannerImage from "../assets/images/fleet-banner.jpg";
@@ -66,6 +67,11 @@ export default function Fleet() {
 
     return (
         <>
+            <SEO
+                title="Ford Fleet"
+                description="Ford Fleet solutions from Ford Laus Group for businesses and government agencies. Get the right Ford vehicles and support for your fleet."
+                image={bannerImage}
+            />
             <Header />
             <main className="w-full max-w-full">
                 {/* Banner */}

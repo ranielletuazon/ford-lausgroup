@@ -1,5 +1,6 @@
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import SEO from "./components/SEO";
 import bannerImage from "../assets/images/fordservice.jpg";
 
 export default function ServiceReminder() {
@@ -52,6 +53,11 @@ export default function ServiceReminder() {
 
     return (
         <>
+            <SEO
+                title="Ford Aftersales and Customer Service"
+                description="Ford aftersales and customer service at Ford Laus Group. Keep your Ford in top condition with service reminders, genuine parts and Ford-trained technicians."
+                image={bannerImage}
+            />
             <Header />
             <main className="w-full max-w-full">
                 {/* Banner */}

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import SEO from "../components/SEO";
 import ColorPicker from "../components/ColorPicker";
 import { getPosts } from "../../assets/data/post";
 
@@ -446,6 +447,12 @@ export default function RangerRaptor() {
 
     return (
         <>
+            <SEO
+                title="Ford Ranger Raptor"
+                description="Discover the Ford Ranger Raptor at Ford Laus Group, the ultimate high-performance off-road pickup. Explore specs, colors and features."
+                image={heroBanner}
+                type="product"
+            />
             <Header />
             <main className="w-full max-w-full">
                 {/* Hero */}

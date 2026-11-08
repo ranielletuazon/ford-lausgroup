@@ -1,5 +1,6 @@
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import SEO from "./components/SEO";
 import Playlist from "./components/Playlist";
 import bannerImage from "../assets/images/nextgenfordbanner.jpg";
 import everestImage from "../assets/images/surf.jpg";
@@ -40,6 +41,11 @@ export default function NextGenFord() {
 
     return (
         <>
+            <SEO
+                title="Next-Gen Ford Vehicles"
+                description="Discover the Next-Gen Ford lineup at Ford Laus Group, including the Ford Ranger, Everest and Territory, built tougher, smarter and more capable."
+                image={bannerImage}
+            />
             <Header />
             <main className="w-full max-w-full">
                 {/* Banner with the heading on top of the image */}

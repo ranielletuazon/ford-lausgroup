@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import SEO from "../components/SEO";
 import ColorPicker from "../components/ColorPicker";
 import { getPosts } from "../../assets/data/post";
 
@@ -683,6 +684,12 @@ export default function Everest() {
 
     return (
         <>
+            <SEO
+                title="Next-Gen Ford Everest"
+                description="Discover the Next-Gen Ford Everest SUV at Ford Laus Group. Explore variants, specs, colors and features, and book a test drive."
+                image={heroBanner}
+                type="product"
+            />
             <Header />
             <main className="w-full max-w-full">
                 {/* Hero */}

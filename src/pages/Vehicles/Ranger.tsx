@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import SEO from "../components/SEO";
 import { getPosts } from "../../assets/data/post";
 
 import heroBanner from "../../assets/vehicles/ranger/hero_banner.jpg";
@@ -687,6 +688,12 @@ export default function Ranger() {
 
     return (
         <>
+            <SEO
+                title="Next-Gen Ford Ranger"
+                description="Discover the Next-Gen Ford Ranger at Ford Laus Group. Explore variants, prices, specs and features, and book a test drive today."
+                image={heroBanner}
+                type="product"
+            />
             <Header />
             <main className="w-full max-w-full">
                 {/* Hero */}

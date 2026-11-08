@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import SEO from "../components/SEO";
 import ColorPicker from "../components/ColorPicker";
 import { getPosts } from "../../assets/data/post";
 
@@ -239,6 +240,12 @@ export default function Explorer() {
 
     return (
         <>
+            <SEO
+                title="The All-New Ford Explorer"
+                description="Discover the All-New Ford Explorer at Ford Laus Group. Explore specs, colors and features of Ford's premium 3-row SUV."
+                image={heroBanner}
+                type="product"
+            />
             <Header />
             <main className="w-full max-w-full">
                 {/* Hero */}

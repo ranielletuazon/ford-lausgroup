@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import SEO from "./components/SEO";
 
 // Colors Mustang
 import oxfordWhiteImage from "../assets/images/vehicles/mustang/oxfordwhite.jpg";
@@ -143,6 +144,10 @@ export default function NewVehicles() {
 
     return (
         <>
+            <SEO
+                title="New Ford Vehicles"
+                description="Explore new Ford vehicles at Ford Laus Group: Ranger, Ranger Raptor, Everest, Territory, Territory Hybrid, Explorer, Bronco, Mustang and Mustang Mach-E."
+            />
             <Header />
             <main className="w-full max-w-full">
                 {/* Heading */}

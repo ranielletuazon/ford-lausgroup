@@ -1,5 +1,6 @@
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import SEO from "./components/SEO";
 import bannerImage from "../assets/images/financeheaderbanner.jpg";
 
 export default function Finance() {
@@ -10,6 +11,11 @@ export default function Finance() {
 
     return (
         <>
+            <SEO
+                title="Ford Finance Deals"
+                description="Explore Ford finance deals and flexible payment options at Ford Laus Group to help you drive home your new Ford sooner."
+                image={bannerImage}
+            />
             <Header />
             <main className="w-full max-w-full">
                 {/* Banner */}

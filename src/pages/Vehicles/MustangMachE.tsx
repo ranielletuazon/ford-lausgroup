@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import SEO from "../components/SEO";
 import ColorPicker from "../components/ColorPicker";
 import { getPosts } from "../../assets/data/post";
 
@@ -217,6 +218,12 @@ export default function MustangMachE() {
 
     return (
         <>
+            <SEO
+                title="Ford Mustang Mach-E"
+                description="Discover the all-electric Ford Mustang Mach-E at Ford Laus Group. Explore range, specs, colors and features."
+                image={heroBanner}
+                type="product"
+            />
             <Header />
             <main className="w-full max-w-full">
                 {/* Hero */}

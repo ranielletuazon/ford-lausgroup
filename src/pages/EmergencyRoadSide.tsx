@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import SEO from "./components/SEO";
 import bannerImage from "../assets/images/era.jpg";
 import helpImage from "../assets/images/roadside-help.png";
 import towingImage from "../assets/images/roadside-towing.png";
@@ -165,6 +166,11 @@ export default function EmergencyRoadside() {
 
     return (
         <>
+            <SEO
+                title="Ford Emergency Roadside Assistance"
+                description="Ford Emergency Roadside Assistance provides 24/7 help, towing and on-the-spot repairs for Ford owners, wherever you are in the Philippines."
+                image={bannerImage}
+            />
             <Header />
             <main className="w-full max-w-full">
                 {/* Banner */}
