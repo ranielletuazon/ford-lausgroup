@@ -1,5 +1,6 @@
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import SEO from "./components/SEO";
 import { getPosts } from "../assets/data/post";
 
 export default function DealerNews() {
@@ -18,6 +19,10 @@ export default function DealerNews() {
 
     return (
         <>
+            <SEO
+                title="Dealer News"
+                description="Read the latest news, promos, events and announcements from Ford Laus Group dealerships across Luzon."
+            />
             <Header />
             <main className="w-full max-w-full">
                 {/* Page heading */}

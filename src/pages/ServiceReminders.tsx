@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import SEO from "./components/SEO";
 import { getPosts } from "../assets/data/post";
 
 // TODO: add the banner photo in src/assets/images/ and import it here, then use it below
@@ -90,6 +91,11 @@ export default function ServiceReminders() {
 
     return (
         <>
+            <SEO
+                title="7 Point Vehicle Check & Service Reminders"
+                description="Keep your Ford safe on the road with our 7 point vehicle check and service reminders. Book your Ford service at Ford Laus Group."
+                image={bannerImage}
+            />
             <Header />
             <main className="w-full max-w-full">
                 {/* Banner */}

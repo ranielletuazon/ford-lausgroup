@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import SEO from "../components/SEO";
 import ColorPicker from "../components/ColorPicker";
 import { getPosts } from "../../assets/data/post";
 
@@ -265,6 +266,12 @@ export default function Mustang() {
 
     return (
         <>
+            <SEO
+                title="Ford Mustang"
+                description="Discover the iconic Ford Mustang at Ford Laus Group. Explore specs, colors and performance features of the legendary sports car."
+                image={heroBanner}
+                type="product"
+            />
             <Header />
             <main className="w-full max-w-full">
                 {/* Hero */}

@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import SEO from "./components/SEO";
 import bannerImage from "../assets/images/financeheader2.jpg";
 
 export default function LausAutoFinance() {
@@ -58,6 +59,11 @@ export default function LausAutoFinance() {
 
     return (
         <>
+            <SEO
+                title="Motor Insurance"
+                description="Protect your Ford with motor insurance through Laus Auto Finance. Request a quote and get covered with Ford Laus Group."
+                image={bannerImage}
+            />
             <Header />
             <main className="w-full max-w-full">
                 {/* Banner */}

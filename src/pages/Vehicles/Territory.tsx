@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import SEO from "../components/SEO";
 import { getPosts } from "../../assets/data/post";
 
 // TODO: add the photos in src/assets/vehicles/territory/, import each one here
@@ -127,6 +128,12 @@ export default function Territory() {
 
     return (
         <>
+            <SEO
+                title="Next-Gen Ford Territory"
+                description="Discover the Next-Gen Ford Territory SUV at Ford Laus Group. Explore variants, specs and features, and download the brochure."
+                image={heroBanner}
+                type="product"
+            />
             <Header />
             <main className="w-full max-w-full">
                 {/* Hero */}

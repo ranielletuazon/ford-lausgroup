@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import SEO from "./components/SEO";
 // TODO: save the dealership collage from the old site with this name
 import contactBanner from "../assets/images/contact-banner.jpg";
 
@@ -29,6 +30,11 @@ export default function Contact() {
 
     return (
         <>
+            <SEO
+                title="Contact Us"
+                description="Get in touch with Ford Laus Group. Find our Ford dealerships in Pampanga, Clark, Tarlac, Subic, Dagupan, Cabanatuan, Isabela and Ilocos Norte, or send us an inquiry online."
+                image={contactBanner}
+            />
             <Header />
             <main className="w-full max-w-full">
                 {/* Banner + heading */}
