@@ -7,6 +7,7 @@ import NotFound from "./pages/NotFound";
 import NextGenFord from "./pages/NextGenFord";
 import Contact from "./pages/Contact";
 import DealerNews from "./pages/DealerNews";
+import DealerNewsPost from "./pages/DealerNewsPost";
 import ServiceReminder from "./pages/ServiceReminder";
 import ServiceReminders from "./pages/ServiceReminders";
 import ExtendedWarranty from "./pages/ExtendedWarranty";
@@ -40,6 +41,10 @@ function App() {
                     ></Route>
                     <Route path="contact-us" element={<Contact />}></Route>
                     <Route path="dealer-news" element={<DealerNews />}></Route>
+                    <Route
+                        path="dealer-news/:slug"
+                        element={<DealerNewsPost />}
+                    ></Route>
                     <Route
                         path="service-reminders-for-ford-car-owners"
                         element={<ServiceReminder />}

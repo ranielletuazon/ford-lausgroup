@@ -132,4 +132,34 @@
         <changefreq>yearly</changefreq>
         <priority>0.8</priority>
     </url>
+    <url>
+        <loc>https://www.lausfordgroup.com.ph/dealer-news/ford-pampanga-25th-anniversary</loc>
+        <lastmod>2024-11-08</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://www.lausfordgroup.com.ph/dealer-news/ford-metro-baguio-decade-of-excellence</loc>
+        <lastmod>2024-10-02</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://www.lausfordgroup.com.ph/dealer-news/rainy-day-blowout</loc>
+        <lastmod>2024-09-05</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://www.lausfordgroup.com.ph/dealer-news/ford-freedom-deals</loc>
+        <lastmod>2024-08-07</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://www.lausfordgroup.com.ph/dealer-news/its-fordofjuly</loc>
+        <lastmod>2024-07-04</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
 </urlset>
