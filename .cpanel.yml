@@ -1,0 +1,8 @@
+---
+deployment:
+    tasks:
+        - export DEPLOYPATH=/home/ajpetrte/public_html/fordlausgroup.com.ph/
+        - export REPOPATH=/home/ajpetrte/repositories/ford-lausgroup
+        - /bin/mkdir -p $DEPLOYPATH
+        - /bin/rm -rf $DEPLOYPATH*
+        - /bin/cp -R $REPOPATH/dist/. $DEPLOYPATH
