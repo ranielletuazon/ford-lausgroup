@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import SEO from "./components/SEO";
@@ -10,57 +11,58 @@ import step3Image from "../assets/images/video-call-min.jpg";
 import step4Image from "../assets/images/agree-purchase-min.jpg";
 
 export default function VirtualShowroom() {
-    // TODO: replace the "#" links with each dealer's Messenger link and email
+    // Each dealer's WhatsApp link (the number with the country code, no "+" or spaces)
+    // and email (no space after "mailto:")
     const DEALERS = [
         {
             name: "Ford Pampanga",
-            messageHref: "https://wa.me/+639188542169",
-            emailHref: "mailto: gadungca@lausgroup.com.ph",
+            messageHref: "https://wa.me/639188542169",
+            emailHref: "mailto:iddelacruz@lausgroup.com.ph",
         },
         {
             name: "Ford Dagupan",
-            messageHref: "https://wa.me/+639188542948",
-            emailHref: "mailto: bdvelasco@lausgroup.com.ph",
+            messageHref: "https://wa.me/639188542948",
+            emailHref: "mailto:bdvelasco@lausgroup.com.ph",
         },
         {
             name: "Ford Ilocos Norte",
-            messageHref: "https://wa.me/+639188542300",
-            emailHref: "mailto: jvdomingo@lausgroup.com.ph",
+            messageHref: "https://wa.me/639188542300",
+            emailHref: "mailto:jdduya@lausgroup.com.ph",
         },
         {
             name: "Ford Isabela",
-            messageHref: "https://wa.me/ +639285500803",
-            emailHref: "mailto: cocornel@lausgroup.com.ph",
+            messageHref: "https://wa.me/639285500803",
+            emailHref: "mailto:jmmirando@lausgroup.com.ph",
         },
         {
             name: "Ford Libis",
-            messageHref: "https://wa.me/+639989542814",
-            emailHref: "mailto: mdyambao@lausgroup.com.ph",
+            messageHref: "https://wa.me/639989542814",
+            emailHref: "mailto:phpadrinao@fordlibis.com.ph",
         },
         {
             name: "Ford Metro Baguio",
-            messageHref: "https://wa.me/+639188542453",
-            emailHref: "mailto: iddelacruz@lausgroup.com.ph",
+            messageHref: "https://wa.me/639188542453",
+            emailHref: "mailto:gcverinio@fordlibis.com.ph",
         },
         {
             name: "Ford Clark",
-            messageHref: "https://wa.me/+639985900383",
-            emailHref: "mailto: mdpaule@lausgroup.com.ph",
+            messageHref: "https://wa.me/639985900383",
+            emailHref: "mailto:tpangeles@lausgroup.com.ph",
         },
         {
             name: "Ford Tarlac",
-            messageHref: "https://wa.me/+639188542322",
-            emailHref: "mailto: ipvillarosa@lausgroup.com.ph",
+            messageHref: "https://wa.me/639188542322",
+            emailHref: "mailto:jcpagco@lausgroup.com.ph",
         },
         {
             name: "Ford Subic",
-            messageHref: "https://wa.me/+639188542797",
-            emailHref: "mailto: gcverinio@lausgroup.com.ph",
+            messageHref: "https://wa.me/639188542797",
+            emailHref: "mailto:lmjimenez@lausgroup.com.ph",
         },
         {
             name: "Ford Cabanatuan",
-            messageHref: "https://wa.me/+639188542222",
-            emailHref: "mailto: jmsantos@lausgroup.com.ph",
+            messageHref: "https://wa.me/639188542222",
+            emailHref: "mailto:tgherrera@lausgroup.com.ph",
         },
     ];
 
@@ -103,20 +105,37 @@ export default function VirtualShowroom() {
         });
 
     // Share links use the address of this page
+    // TODO: change this to the new page address once the site is live
+    const PAGE_URL =
+        "https://www.lausfordgroup.com.ph/Page/126/virtual-showroom-contactless-service";
+    const PAGE_TITLE = "Ford Laus Virtual Showroom";
     const SHARE = [
         {
             label: "Facebook",
-            href: `https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.lausfordgroup.com.ph%2FPage%2F126%2Fvirtual-showroom-contactless-service&title=Ford%20Laus%20Virtual%20Showroom`,
+            href: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(PAGE_URL)}`,
         },
         {
-            label: "Twitter",
-            href: `https://twitter.com/intent/tweet?status=Ford%20Laus%20Virtual%20Showroom+https://www.lausfordgroup.com.ph/Page/126/virtual-showroom-contactless-service`,
+            label: "X",
+            href: `https://twitter.com/intent/tweet?url=${encodeURIComponent(PAGE_URL)}&text=${encodeURIComponent(PAGE_TITLE)}`,
         },
         {
             label: "LinkedIn",
-            href: `https://www.linkedin.com/uas/login?session_redirect=https%3A%2F%2Fwww.linkedin.com%2FshareArticle%3Fmini%3Dtrue%26url%3Dhttps%3A%2F%2Fwww.lausfordgroup.com.ph%2FPage%2F126%2Fvirtual-showroom-contactless-service6%26title%3DFord%2520Laus%2520Virtual%2520Showroom`,
+            href: `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(PAGE_URL)}`,
         },
     ];
+
+    // The logo of each share button (24x24 paths)
+    const SHARE_ICONS: Record<string, ReactNode> = {
+        Facebook: (
+            <path d="M14 8.5V6.8c0-.8.2-1.3 1.4-1.3H17V2.6c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.4-4 4.1v1.9H8V11.7h2.6V21.5H14v-9.8h2.6l.4-3.2H14Z" />
+        ),
+        X: (
+            <path d="M17.8 3h3.1l-6.7 7.6L22 21h-6.2l-4.8-6.3L5.5 21H2.4l7.1-8.1L2 3h6.3l4.4 5.8L17.8 3Zm-1.1 16.2h1.7L7.4 4.7H5.6l11.1 14.5Z" />
+        ),
+        LinkedIn: (
+            <path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9.75h4v11.25H3V9.75Zm6.5 0h3.8v1.55h.05c.53-1 1.84-2.05 3.78-2.05 4.04 0 4.79 2.66 4.79 6.12V21h-4v-4.98c0-1.19-.02-2.72-1.66-2.72-1.66 0-1.91 1.3-1.91 2.63V21h-4V9.75Z" />
+        ),
+    };
 
     return (
         <>
@@ -224,16 +243,24 @@ export default function VirtualShowroom() {
                         <p className="text-sm font-semibold uppercase tracking-wide text-[#003478]">
                             Share on social media
                         </p>
-                        <ul className="flex flex-wrap justify-center gap-2">
+                        <ul className="flex gap-2">
                             {SHARE.map((item) => (
                                 <li key={item.label}>
                                     <a
                                         href={item.href}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="inline-block rounded-full bg-[#F2F2F2] px-4 py-2 text-sm font-semibold text-[#102B4E] transition-colors hover:bg-[#003478] hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-[#066FEF]"
+                                        aria-label={`Share on ${item.label}`}
+                                        className="flex h-10 w-10 items-center justify-center rounded-full bg-[#F2F2F2] text-[#102B4E] transition-colors hover:bg-[#003478] hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-[#066FEF]"
                                     >
-                                        {item.label}
+                                        <svg
+                                            viewBox="0 0 24 24"
+                                            fill="currentColor"
+                                            aria-hidden="true"
+                                            className="h-4 w-4"
+                                        >
+                                            {SHARE_ICONS[item.label]}
+                                        </svg>
                                     </a>
                                 </li>
                             ))}

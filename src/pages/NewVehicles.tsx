@@ -232,7 +232,7 @@ export default function NewVehicles() {
                                                             <p className="mt-1 text-lg font-semibold">
                                                                 {color.name}
                                                             </p>
-                                                            <ul className="mt-4 grid w-max grid-cols-5 gap-3">
+                                                            <ul className="mt-4 grid w-max grid-cols-5 md:grid-cols-10 gap-3">
                                                                 {model.colors.map(
                                                                     (
                                                                         item,

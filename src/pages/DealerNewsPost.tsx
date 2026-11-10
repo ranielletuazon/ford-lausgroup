@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+import { useState, type ReactNode } from "react";
 import { useParams } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -63,6 +63,9 @@ export default function DealerNewsPost() {
     const index = POSTS.findIndex((p) => p.href === `/dealer-news/${slug}`);
     const post = index >= 0 ? POSTS[index] : undefined;
 
+    // The photo that is shown big in the gallery (hooks must come before the "not found" return)
+    const [photoIndex, setPhotoIndex] = useState(0);
+
     // Post not found
     if (!post) {
         return (
@@ -100,10 +103,13 @@ export default function DealerNewsPost() {
 
     const body = post.description || post.excerpt;
     const paragraphs = toParagraphs(body);
-    const gallery = (post.gallery ?? "")
-        .split(",")
-        .map((src) => src.trim())
-        .filter(Boolean);
+
+    // The main photo first, then the gallery photos from post.json
+    const PHOTOS = [post.image, ...(post.gallery ?? [])].filter((src) => src);
+
+    // Previous / next, going round from the last photo back to the first
+    const showPhoto = (i: number) =>
+        setPhotoIndex((i + PHOTOS.length) % PHOTOS.length);
 
     // Newer / older neighbours (list is sorted newest first)
     const newer = index > 0 ? POSTS[index - 1] : undefined;
@@ -138,7 +144,7 @@ export default function DealerNewsPost() {
         "@type": "NewsArticle",
         headline: post.title,
         description: metaDescription,
-        image: [`${BASE_URL}${post.image}`],
+        image: PHOTOS.map((src) => `${BASE_URL}${src}`),
         datePublished: post.createdAt ?? post.date,
         dateModified: post.date,
         mainEntityOfPage: pageUrl,
@@ -220,16 +226,85 @@ export default function DealerNewsPost() {
                     </div>
                 </section>
 
-                {/* Cover image overlapping the heading */}
+                {/* Photos overlapping the heading: one big photo, with arrows and thumbnails when there is a gallery */}
                 <section className="container mx-auto -mt-20 px-4 lg:-mt-28">
-                    <div className="mx-auto max-w-5xl overflow-hidden rounded-2xl bg-[#F2F2F2] shadow-xl">
-                        <img
-                            src={post.image}
-                            alt={post.title}
-                            decoding="async"
-                            draggable={false}
-                            className="block aspect-[16/9] w-full object-cover"
-                        />
+                    <div className="mx-auto max-w-5xl">
+                        <div className="relative overflow-hidden rounded-2xl bg-[#F2F2F2] shadow-xl">
+                            <img
+                                src={PHOTOS[photoIndex]}
+                                alt={
+                                    PHOTOS.length > 1
+                                        ? `${post.title}, photo ${photoIndex + 1} of ${PHOTOS.length}`
+                                        : post.title
+                                }
+                                decoding="async"
+                                draggable={false}
+                                className="block aspect-[16/9] w-full object-contain"
+                            />
+
+                            {PHOTOS.length > 1 && (
+                                <>
+                                    <button
+                                        type="button"
+                                        aria-label="Previous photo"
+                                        onClick={() =>
+                                            showPhoto(photoIndex - 1)
+                                        }
+                                        className="absolute left-3 top-1/2 flex h-11 w-11 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full bg-white/90 shadow-md transition-colors hover:bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-[#066FEF]"
+                                    >
+                                        <span
+                                            aria-hidden="true"
+                                            className="ml-1 h-2.5 w-2.5 rotate-[135deg] border-b-2 border-r-2 border-[#003478]"
+                                        />
+                                    </button>
+                                    <button
+                                        type="button"
+                                        aria-label="Next photo"
+                                        onClick={() =>
+                                            showPhoto(photoIndex + 1)
+                                        }
+                                        className="absolute right-3 top-1/2 flex h-11 w-11 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full bg-white/90 shadow-md transition-colors hover:bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-[#066FEF]"
+                                    >
+                                        <span
+                                            aria-hidden="true"
+                                            className="mr-1 h-2.5 w-2.5 -rotate-45 border-b-2 border-r-2 border-[#003478]"
+                                        />
+                                    </button>
+                                    <p className="absolute bottom-3 right-3 rounded-full bg-[#001A3D]/70 px-3 py-1 text-xs font-semibold text-white">
+                                        {photoIndex + 1} / {PHOTOS.length}
+                                    </p>
+                                </>
+                            )}
+                        </div>
+
+                        {/* Thumbnails, they scroll sideways on phones */}
+                        {PHOTOS.length > 1 && (
+                            <ul className="mt-3 flex gap-2 overflow-x-auto p-1">
+                                {PHOTOS.map((src, i) => (
+                                    <li key={src} className="shrink-0">
+                                        <button
+                                            type="button"
+                                            aria-label={`Show photo ${i + 1}`}
+                                            aria-pressed={i === photoIndex}
+                                            onClick={() => setPhotoIndex(i)}
+                                            className={`block cursor-pointer overflow-hidden rounded-lg ring-2 transition focus:outline-none focus-visible:ring-[#066FEF] ${
+                                                i === photoIndex
+                                                    ? "ring-[#003478]"
+                                                    : "opacity-60 ring-transparent hover:opacity-100"
+                                            }`}
+                                        >
+                                            <img
+                                                src={src}
+                                                alt=""
+                                                loading="lazy"
+                                                draggable={false}
+                                                className="h-16 w-24 object-cover sm:h-20 sm:w-28"
+                                            />
+                                        </button>
+                                    </li>
+                                ))}
+                            </ul>
+                        )}
                     </div>
                 </section>
 
@@ -237,6 +312,13 @@ export default function DealerNewsPost() {
                 <section className="container mx-auto px-4 py-12 lg:py-16">
                     <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[minmax(0,1fr)_20rem]">
                         <article>
+                            {/* Subtitle, hidden when it is empty */}
+                            {post.subtitle && (
+                                <h2 className="mb-6 text-2xl font-bold leading-snug text-[#003478] lg:text-3xl">
+                                    {post.subtitle}
+                                </h2>
+                            )}
+
                             <div className="space-y-6 text-base leading-relaxed text-[#102B4E]/90 lg:text-lg lg:leading-8">
                                 {paragraphs.map((text, i) => (
                                     <p
@@ -251,30 +333,6 @@ export default function DealerNewsPost() {
                                     </p>
                                 ))}
                             </div>
-
-                            {/* Optional gallery (comma separated image paths in post.json) */}
-                            {gallery.length > 0 && (
-                                <div className="mt-12">
-                                    <h2 className="border-l-4 border-[#066FEF] pl-3 text-xl font-bold text-[#003478] lg:text-2xl">
-                                        Gallery
-                                    </h2>
-                                    <ul className="mt-6 grid grid-cols-2 gap-4 md:grid-cols-3">
-                                        {gallery.map((src, i) => (
-                                            <li
-                                                key={src}
-                                                className="overflow-hidden rounded-xl bg-[#F2F2F2]"
-                                            >
-                                                <img
-                                                    src={src}
-                                                    alt={`${post.title} photo ${i + 1}`}
-                                                    loading="lazy"
-                                                    className="aspect-square h-full w-full object-cover transition-transform duration-500 hover:scale-105 motion-reduce:transition-none"
-                                                />
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </div>
-                            )}
 
                             {/* Share */}
                             <div className="mt-12 flex flex-col gap-3 border-t border-gray-200 pt-8 sm:flex-row sm:items-center sm:justify-between">

@@ -16,7 +16,7 @@ import territoryHybridImage3 from "../../assets/vehicles/territory-hybrid/territ
 import territoryHybridImage4 from "../../assets/vehicles/territory-hybrid/territory4.webp";
 import territoryHybridImage5 from "../../assets/vehicles/territory-hybrid/territory5.webp";
 import territoryHybridImage6 from "../../assets/vehicles/territory-hybrid/territory6.webp";
-// import brochure from "../../assets/vehicles/territory-hybrid/ford-territory-hybrid-brochure.pdf";
+import brochure from "../../assets/vehicles/territory-hybrid/ford-territory-hybrid-brochure-jan-26.pdf";
 // import white from "../../assets/vehicles/territory-hybrid/white.webp";
 
 export default function TerritoryHybrid() {
@@ -43,7 +43,7 @@ export default function TerritoryHybrid() {
 
     // The buttons under the title. A button with no link is not shown.
     // TODO: add the brochure file and the real links
-    const BROCHURE_HREF = "";
+    const BROCHURE_HREF = brochure;
     const HERO_BUTTONS = [
         { label: "Brochure", href: BROCHURE_HREF },
         { label: "Price List", href: "#" },

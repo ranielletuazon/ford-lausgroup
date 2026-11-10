@@ -10,7 +10,7 @@ import { getPosts } from "../../assets/data/post";
 // The file names cannot have a "#" in them (Vite cannot import them).
 // For example:
 import heroBanner from "../../assets/vehicles/mustang/hero_banner.jpg";
-// import brochure from "../../assets/vehicles/mustang/ford-mustang-brochure.pdf";
+import brochure from "../../assets/vehicles/mustang/ford-mustang-brochure.pdf";
 // import shelbyBrochure from "../../assets/vehicles/mustang/ford-mustang-shelby-gt500-brochure.pdf";
 import mustangImage1 from "../../assets/vehicles/mustang/mustang1.jpg";
 import mustangImage2 from "../../assets/vehicles/mustang/mustang2.jpg";
@@ -65,7 +65,7 @@ export default function Mustang() {
 
     // The buttons under the title. A button with no link is not shown.
     // TODO: add the brochure file and the real links
-    const BROCHURE_HREF = "";
+    const BROCHURE_HREF = brochure;
     const HERO_BUTTONS = [
         { label: "Brochure", href: BROCHURE_HREF },
         { label: "Price List", href: "#" },

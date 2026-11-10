@@ -6,11 +6,12 @@ export type Post = {
     title: string;
     excerpt: string;
     date: string; // YYYY-MM-DD
-    image: string;
+    image: string; // the main photo, also used on the news cards
+    gallery?: string[]; // more photos for the post page, e.g. "/images/news/rainy-day-blowout/2.jpg"
     href: string; // link to the post page, e.g. /dealer-news/rainy-day-blowout
+    subtitle?: string; // shown under the photos, before the description
     description?: string;
     createdAt?: string; // YYYY-MM-DD
-    gallery?: string;
     status?: string;
 };
 

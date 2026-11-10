@@ -26,7 +26,7 @@ import machEImage8 from "../../assets/vehicles/mustang-mach-e/mache8.webp";
 import machEImage9 from "../../assets/vehicles/mustang-mach-e/mache9.webp";
 import machEImage10 from "../../assets/vehicles/mustang-mach-e/mache10.webp";
 
-// import brochure from "../../assets/vehicles/mustang-mach-e/ford-mustang-mach-e-brochure.pdf";
+import brochure from "../../assets/vehicles/mustang-mach-e/mustang-mach-e-brochure.pdf";
 // import white from "../../assets/vehicles/mustang-mach-e/white.webp";
 
 export default function MustangMachE() {
@@ -53,7 +53,7 @@ export default function MustangMachE() {
 
     // The buttons under the title. A button with no link is not shown.
     // TODO: add the brochure file and the real links
-    const BROCHURE_HREF = "";
+    const BROCHURE_HREF = brochure;
     const HERO_BUTTONS = [
         { label: "Brochure", href: BROCHURE_HREF },
         { label: "Price List", href: "#" },
