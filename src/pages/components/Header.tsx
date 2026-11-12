@@ -1,6 +1,11 @@
 import { useEffect, useRef, useState } from "react";
 type NavChild = { label: string; to: string };
-type NavItem = { label: string; to: string; children?: NavChild[] };
+type NavItem = {
+    label: string;
+    to: string;
+    children?: NavChild[];
+    external?: boolean;
+};
 
 export default function Header() {
     // TODO: replace the paths with the real pages
@@ -43,6 +48,11 @@ export default function Header() {
         { label: "Virtual Showroom", to: "/virtual-showroom" },
         { label: "Dealer News", to: "/dealer-news" },
         { label: "Contact Us", to: "/contact-us" },
+        {
+            label: "Careers",
+            to: "https://careers.lausgroup.com.ph/",
+            external: true,
+        },
     ];
 
     const [menuOpen, setMenuOpen] = useState(false);
@@ -196,6 +206,7 @@ export default function Header() {
                                 >
                                     <a
                                         href={item.to}
+                                        target="_blank"
                                         aria-current={
                                             active && isActive(item.to)
                                                 ? "page"
